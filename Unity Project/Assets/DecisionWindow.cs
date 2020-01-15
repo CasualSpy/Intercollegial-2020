@@ -63,6 +63,6 @@ public class DecisionWindow : MonoBehaviour
         canvasGroup.alpha = 0;
         canvasGroup.interactable = false;
         Debug.Log("You chose:" + choice);
-        //TODO send choice to player script
+        GameObject.Find("Player").GetComponent<PlayerData>().RecieveChoice(choice);
     }
 }
