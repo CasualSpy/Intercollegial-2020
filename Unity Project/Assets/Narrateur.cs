@@ -25,6 +25,7 @@ public class Narrateur : MonoBehaviour
         }
         else
         {
+            VD.EndDialogue();
             playerData.StartDialog(GameObject.Find("Boulanger").GetComponent<Dateable>());
         }
     }

@@ -601,7 +601,7 @@ RectTransform:
   - {fileID: 158262813}
   - {fileID: 975714969}
   m_Father: {fileID: 1622791095}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -922,8 +922,8 @@ GameObject:
   m_Component:
   - component: {fileID: 525393026}
   - component: {fileID: 525393025}
-  - component: {fileID: 525393027}
   - component: {fileID: 525393028}
+  - component: {fileID: 525393027}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -970,6 +970,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TalkingTo: {fileID: 0}
+  Tags: []
 --- !u!114 &525393028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2582,7 +2583,7 @@ RectTransform:
   - {fileID: 845466195}
   - {fileID: 434042914}
   m_Father: {fileID: 1622791095}
-  m_RootOrder: 1
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3124,6 +3125,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerData: {fileID: 0}
+  VIDE: {fileID: 0}
 --- !u!114 &1403708109
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3137,6 +3139,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   diags:
+  - Boulanger
   - Charlie
   - CommentModifier
   - CrazyCap
@@ -3154,7 +3157,7 @@ MonoBehaviour:
   - Test
   - TriggeredDude
   - Witch
-  assignedIndex: 11
+  assignedIndex: 12
   assignedID: 76408
   assignedDialogue: Narration
   interactionCount: 0
@@ -3398,7 +3401,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fe82f2066e868ca4f95513a084f40f7c,
+      objectReference: {fileID: 21300000, guid: 1069b7f7b450a004bac49c595edff033,
         type: 3}
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3448,7 +3451,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3468,22 +3471,22 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 11.9
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 13.5
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 705.3
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1000
+      value: 1106.7
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3514,6 +3517,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854570, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: Name
+      value: Boulanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854570, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: Description
+      value: cave
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3608,7 +3621,17 @@ PrefabInstance:
     - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: assignedIndex
-      value: 15
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedID
+      value: 94059
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedDialogue
+      value: Boulanger
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6cc22ed73fc2a408b27c218040b7ae, type: 3}
@@ -3782,10 +3805,10 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1125789661}
-  - {fileID: 1148581283}
   - {fileID: 1787703237}
   - {fileID: 1503341382}
   - {fileID: 233165282}
+  - {fileID: 1148581283}
   - {fileID: 1296650706}
   - {fileID: 1642567063}
   m_Father: {fileID: 0}
@@ -4918,6 +4941,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1622791095}
     m_Modifications:
+    - target: {fileID: 7728592204993854564, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe82f2066e868ca4f95513a084f40f7c,
+        type: 3}
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_Name
@@ -4961,7 +4990,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}

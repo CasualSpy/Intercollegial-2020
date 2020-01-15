@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        playerData = GetComponent<PlayerData>();
+        playerData = GameObject.Find("Player").GetComponent<PlayerData>();
         VD.LoadDialogues();
 
 
@@ -70,11 +70,11 @@ public class DialogueManager : MonoBehaviour
 
                     string extraData = data.creferences[i].extraData;
                     string[] tagsToCheck = extraData.Split(';');
-                    foreach (string tag in tagsToCheck)
-                    {
-                        //if (!playerData.HasTag(tag))
-                            available = false;
-                    }
+                    //foreach (string tag in tagsToCheck)
+                    //{
+                    //    if (!playerData.HasTag(tag))
+                    //        available = false;
+                    //}
 
                     text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
                     text_Choices[i].transform.parent.gameObject.SetActive(true);
