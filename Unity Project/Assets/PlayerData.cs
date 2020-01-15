@@ -10,6 +10,7 @@ public class PlayerData : MonoBehaviour
     private static PlayerData instance = null;
     private bool InDialog = false;
     private Dateable TalkingTo;
+    private bool WaitForInput = false;
     public enum Item
     {
     }
@@ -82,5 +83,35 @@ public class PlayerData : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void NextDialog()
+    {
+        TalkingTo.dialogues.Next();
+        ReadCurrentDialog();
+    }
+
+    void ReadCurrentDialog()
+    {
+        string dialog = TalkingTo.dialogues.GetCurrentDialogue();
+        GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetText(dialog);
+        if (TalkingTo.dialogues.HasTrigger())
+            HandleTriggers(TalkingTo.dialogues.GetTrigger());
+
+        string[] choices = TalkingTo.dialogues.GetChoices();
+
+        if (choices.Length > 0)
+        {
+            //Decisions!
+            GameObject.Find("TextBox").GetComponent<DecisionWindow>().PromptUser(choices[0], choices[1], choices[2]);
+            WaitForInput = true;
+        }
+    }
+
+    public void RecieveChoice(string choice)
+    {
+        WaitForInput = false;
+        TalkingTo.dialogues.NextChoice(choice);
+        ReadCurrentDialog();
     }
 }
