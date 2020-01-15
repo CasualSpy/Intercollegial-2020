@@ -27,12 +27,12 @@ public class PlayerData : MonoBehaviour
         dialogueManager = GetComponent<DialogueManager>();
     }
 
-    public List<Item> Inventory { get; set; }
+    public List<InventorySlot> Inventory { get; set; }
     public int Gold { get; set; }
 
     public PlayerData()
     {
-        Inventory = new List<Item>();
+        Inventory = new List<InventorySlot>();
         Tags = new List<string>();
     }
 
@@ -41,6 +41,39 @@ public class PlayerData : MonoBehaviour
         if (instance == null)
             instance = new PlayerData();
         return instance;
+    }
+    
+    public void AddInventoryItem(Item item)
+    {
+        int index = Inventory.FindIndex(x => x.Item == item);
+        if(index == -1)
+        {
+            Inventory.Add(new InventorySlot(item));
+        }
+        else
+        {
+            InventorySlot toModify = Inventory[index];
+            toModify.Count++;
+            Inventory[index] = toModify;
+        }
+    }
+
+    public void RemoveInventoryItem(Item item)
+    {
+        int index = Inventory.FindIndex(x => x.Item == item);
+        if (index != -1)
+        {
+            if (Inventory[index].Count > 1)
+            {
+                InventorySlot toModify = Inventory[index];
+                toModify.Count--;
+                Inventory[index] = toModify;
+            }
+            else
+            {
+                Inventory.RemoveAt(index);
+            }
+        }
     }
 
     public void StartDialog(Dateable dateable)
@@ -84,11 +117,11 @@ public class PlayerData : MonoBehaviour
                 break;
             // Add new item to inventory
             case "addInventory":
-                Inventory.Add((Item)Enum.Parse(typeof(Item), value));
+                AddInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Remove item from inventory
             case "removeInventory":
-                Inventory.Remove((Item)Enum.Parse(typeof(Item), value));
+                RemoveInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Add to player's gold (negative value to remove
             case "gold":
@@ -103,6 +136,9 @@ public class PlayerData : MonoBehaviour
             // Change speaker name during dialog
             case "speaker":
                 GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetSpeaker(value);
+                break;
+            case "addTag":
+                Tags.Add(value);
                 break;
         }
     }
