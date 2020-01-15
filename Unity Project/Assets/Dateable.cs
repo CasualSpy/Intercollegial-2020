@@ -17,6 +17,12 @@ public class Dateable : MonoBehaviour
 
     public void SetEmotion(string emotion)
     {
-        GetComponent<Image>().sprite = Emotions.Find(x => x.emotion == emotion).image;
+        try
+        {
+            GetComponent<Image>().sprite = Emotions.Find(x => x.emotion == emotion).image;
+        } catch (System.Exception e)
+        {
+            Debug.LogError(e);
+        }
     }
 }
