@@ -32,6 +32,15 @@ public class PlayerData : MonoBehaviour
         dialogueManager.Begin();
     }
 
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!VD.nodeData.isPlayer)
+                NextDialog();
+        }
+    }
+
     public List<InventorySlot> Inventory { get; set; }
     public int Gold { get; set; }
 
@@ -129,11 +138,11 @@ public class PlayerData : MonoBehaviour
                 TalkingTo.GetComponent<Dialogues>().SetTree(value);
                 break;
             // Add new item to inventory
-            case "addInventory":
+            case "addinventory":
                 AddInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Remove item from inventory
-            case "removeInventory":
+            case "removeinventory":
                 RemoveInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Add to player's gold (negative value to remove
@@ -150,7 +159,7 @@ public class PlayerData : MonoBehaviour
             case "speaker":
                 GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetSpeaker(value);
                 break;
-            case "addTag":
+            case "addtag":
                 Tags.Add(value);
                 break;
         }

@@ -74,20 +74,27 @@ public class DialogueManager : MonoBehaviour
                 {
                     bool available = true;
 
-                    string extraData = data.creferences[i].extraData;
+                    string extraData = data.creferences[i].extraData;
 
-                    JSONCheck checks = JsonUtility.FromJson<JSONCheck>(data.creferences[i].extraData);
-                    foreach (string tag in checks.tags)
-                    {
-                        if (!playerData.HasTag(tag))
-                            available = false;
-                    }
-                    foreach (InventorySlot item in checks.items)
-                    {
-                        if (!playerData.HasEnoughItem(item.Item, item.Count))
-                            available = false;
-                    }
-
+                    if (extraData != "ExtraData" && extraData != "" && extraData != null)
+                    {
+                        JSONCheck checks = JsonUtility.FromJson<JSONCheck>(data.creferences[i].extraData);
+                        foreach (string tag in checks.tags)
+                        {
+
+                            if (!playerData.HasTag(tag))
+
+                                available = false;
+                        }
+
+                        foreach (InventorySlot item in checks.items)
+                        {
+
+                            if (!playerData.HasEnoughItem(item.Item, item.Count))
+
+                                available = false;
+
+                        }                    }
 
                     text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
                     text_Choices[i].transform.parent.gameObject.SetActive(true);
