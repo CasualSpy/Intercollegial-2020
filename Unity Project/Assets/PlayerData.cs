@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text.RegularExpressions;
 using System;
 using UnityEngine.UI;
+using VIDE_Data;
 
 public class PlayerData : MonoBehaviour
 {
@@ -15,15 +16,29 @@ public class PlayerData : MonoBehaviour
         None,
         Farine,
         Sucre,
-        Fleurs,
+        FleursToxiques,
         Pelle,
-        LivreLocal
+        LivreLocal,
+        Poison
     }
 
     private void Start()
     {
         Gold = 5;
         dialogueManager = GetComponent<DialogueManager>();
+
+
+        dialogueManager.CurrentNPC = GameObject.Find("Narrateur").GetComponent<Narrateur>().VIDE;
+        dialogueManager.Begin();
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            if (!VD.nodeData.isPlayer)
+                NextDialog();
+        }
     }
 
     public List<InventorySlot> Inventory { get; set; }
@@ -99,6 +114,11 @@ public class PlayerData : MonoBehaviour
         //    }
         //}
 
+    public void Yeet(string s, int i)
+    {
+
+    }
+
     public void Events(string name, string value)
     {
         switch (name.ToLower())
@@ -118,11 +138,11 @@ public class PlayerData : MonoBehaviour
                 TalkingTo.GetComponent<Dialogues>().SetTree(value);
                 break;
             // Add new item to inventory
-            case "addInventory":
+            case "addinventory":
                 AddInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Remove item from inventory
-            case "removeInventory":
+            case "removeinventory":
                 RemoveInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Add to player's gold (negative value to remove
@@ -139,7 +159,7 @@ public class PlayerData : MonoBehaviour
             case "speaker":
                 GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetSpeaker(value);
                 break;
-            case "addTag":
+            case "addtag":
                 Tags.Add(value);
                 break;
         }

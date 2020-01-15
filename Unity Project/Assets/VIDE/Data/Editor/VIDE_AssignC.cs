@@ -110,7 +110,7 @@ public class VIDE_AssignC : Editor
         Color defColor = GUI.color;
         GUI.color = Color.yellow;
 
-        if (loadup && !EditorApplication.isUpdating)
+        if (loadup && !EditorApplication.isUpdating && !EditorApplication.isPlayingOrWillChangePlaymode && !EditorApplication.isCompiling)
         {
             loadFiles();
             loadup = false;

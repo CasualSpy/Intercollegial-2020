@@ -8,7 +8,7 @@ public class DialogueWindowScript : MonoBehaviour
     // Start is called before the first frame update
     TextMeshProUGUI contentText;
     TextMeshProUGUI titleText;
-    void Start()
+    void Awake()
     {
         contentText = transform.Find("Content").GetComponent<TextMeshProUGUI>();
         titleText = transform.Find("Title").GetComponent<TextMeshProUGUI>();

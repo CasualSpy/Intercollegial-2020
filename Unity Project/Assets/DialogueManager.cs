@@ -18,7 +18,7 @@ public class DialogueManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        playerData = GetComponent<PlayerData>();
+        playerData = GameObject.Find("Player").GetComponent<PlayerData>();
         VD.LoadDialogues();
 
 
@@ -55,9 +55,8 @@ public class DialogueManager : MonoBehaviour
     }
 
     [Serializable]
-    private struct JSONCheck
-    {
-        public List<string> tags;
+    private struct JSONCheck
+    {        public List<string> tags;
         public List<InventorySlot> items;
         public int trust;
     }
@@ -72,27 +71,33 @@ public class DialogueManager : MonoBehaviour
             for (int i = 0; i < text_Choices.Length; i++)
             {
                 if (i < data.comments.Length)
-                {
+                {
                     bool available = true;
 
                     string extraData = data.creferences[i].extraData;
 
-                    JSONCheck checks = JsonUtility.FromJson<JSONCheck>(data.creferences[i].extraData);
-                    foreach (string tag in checks.tags)
+                    if (extraData != "ExtraData" && extraData != "" && extraData != null)
                     {
-                        if (!playerData.HasTag(tag))
+                        JSONCheck checks = JsonUtility.FromJson<JSONCheck>(data.creferences[i].extraData);
+                        foreach (string tag in checks.tags)
+                        {
+
+                            if (!playerData.HasTag(tag))
+
+                                available = false;
+                        }
+
+                        foreach (InventorySlot item in checks.items)
+                        {
+
+                            if (!playerData.HasEnoughItem(item.Item, item.Count))
+
+                                available = false;
+
+                        }                        if (playerData.TalkingTo.Trust < checks.trust)
                             available = false;
                     }
-                    foreach (InventorySlot item in checks.items)
-                    {
-                        if (!playerData.HasEnoughItem(item.Item, item.Count))
-                            available = false;
-                    }
-
-                    if (playerData.TalkingTo.Trust < checks.trust)
-                        available = false;
-
-
+
                     text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
                     text_Choices[i].transform.parent.gameObject.SetActive(true);
                     text_Choices[i].text = data.comments[i];
