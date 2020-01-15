@@ -13,6 +13,11 @@ public class PlayerData : MonoBehaviour
     private bool WaitForInput = false;
     public enum Item
     {
+        None,
+        Farine,
+        Sucre,
+        Fleurs,
+        Pelle,
     }
 
     private void Start()
@@ -64,7 +69,7 @@ public class PlayerData : MonoBehaviour
                     case "suspicion":
                         float parsed = 0f;
                         if (float.TryParse(value, out parsed))
-                            TalkingTo.Suspicion += parsed;
+                            TalkingTo.Trust -= parsed;
                         break;
                     // Set new dialog tree
                     case "tree":
