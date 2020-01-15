@@ -59,6 +59,7 @@ public class DialogueManager : MonoBehaviour
     {
         public List<string> tags;
         public List<InventorySlot> items;
+        public int trust;
     }
 
     void UpdateUI(VD.NodeData data)
@@ -87,6 +88,9 @@ public class DialogueManager : MonoBehaviour
                         if (!playerData.HasEnoughItem(item.Item, item.Count))
                             available = false;
                     }
+
+                    if (playerData.TalkingTo.Trust < checks.trust)
+                        available = false;
 
 
                     text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
