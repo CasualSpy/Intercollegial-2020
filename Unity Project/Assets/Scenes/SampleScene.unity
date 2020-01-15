@@ -3093,6 +3093,97 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1403708107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1403708110}
+  - component: {fileID: 1403708109}
+  - component: {fileID: 1403708108}
+  m_Layer: 0
+  m_Name: Narrateur
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1403708108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403708107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ea47c384723ee74894fe5b3de05a006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerData: {fileID: 0}
+--- !u!114 &1403708109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403708107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4b8b99d8a12e39e4b94d2d7162c7c978, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  diags:
+  - Charlie
+  - CommentModifier
+  - CrazyCap
+  - DEMO_Condition
+  - demo_Narration
+  - Example3Dialogue
+  - Example4_dialogue
+  - Gaston
+  - Item_LookUp
+  - Laura
+  - MrCube
+  - Narration
+  - NPCOnly
+  - QuestChartDemo
+  - Test
+  - TriggeredDude
+  - Witch
+  assignedIndex: 11
+  assignedID: 76408
+  assignedDialogue: Narration
+  interactionCount: 0
+  alias: 
+  overrideStartNode: -1
+  defaultNPCSprite: {fileID: 0}
+  defaultPlayerSprite: {fileID: 0}
+  targetManager: {fileID: 0}
+  preload: 0
+  notuptodate: 0
+  startp: 0
+  loadtag: 
+  langs: []
+  S_playerDiags: []
+  S_actionNodes: []
+--- !u!4 &1403708110
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1403708107}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 829.78284, y: 376.6337, z: -132.1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1459710769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3303,6 +3394,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1622791095}
     m_Modifications:
+    - target: {fileID: 7728592204993854564, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fe82f2066e868ca4f95513a084f40f7c,
+        type: 3}
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_Name
@@ -3311,7 +3408,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3417,6 +3514,101 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Pivot.y
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.size
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[0]
+      value: Boulanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[1]
+      value: Charlie
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[2]
+      value: CommentModifier
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[3]
+      value: CrazyCap
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[4]
+      value: DEMO_Condition
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[5]
+      value: demo_Narration
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[6]
+      value: Example3Dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[7]
+      value: Example4_dialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[8]
+      value: Gaston
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[9]
+      value: Item_LookUp
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[10]
+      value: Laura
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[11]
+      value: MrCube
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[12]
+      value: Narration
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[13]
+      value: NPCOnly
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[14]
+      value: QuestChartDemo
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[15]
+      value: Test
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: diags.Array.data[16]
+      value: TriggeredDude
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedIndex
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6cc22ed73fc2a408b27c218040b7ae, type: 3}

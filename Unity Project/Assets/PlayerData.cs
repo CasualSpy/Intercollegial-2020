@@ -4,6 +4,7 @@ using UnityEngine;
 using System.Text.RegularExpressions;
 using System;
 using UnityEngine.UI;
+using VIDE_Data;
 
 public class PlayerData : MonoBehaviour
 {
@@ -26,6 +27,10 @@ public class PlayerData : MonoBehaviour
     {
         Gold = 5;
         dialogueManager = GetComponent<DialogueManager>();
+
+
+        dialogueManager.CurrentNPC = GameObject.Find("Narrateur").GetComponent<Narrateur>().VIDE;
+        dialogueManager.Begin();
     }
 
     public List<InventorySlot> Inventory { get; set; }
