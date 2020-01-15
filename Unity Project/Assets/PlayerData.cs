@@ -33,10 +33,12 @@ public class PlayerData : MonoBehaviour
         return instance;
     }
 
-    void StartDialog(Dateable dateable)
+    public void StartDialog(Dateable dateable)
     {
+        Debug.Log("Starting dialog with " + dateable.Name);
         TalkingTo = dateable;
 
+        //TODO actually start the dialogue
     }
 
     void HandleTriggers(string trigger)

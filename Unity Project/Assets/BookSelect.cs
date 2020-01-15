@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 
-public class BookSelect : MonoBehaviour, IPointerEnterHandler, IPointerClickHandler
+public class BookSelect : MonoBehaviour, IPointerClickHandler
 {
     // Start is called before the first frame update
     public Dateable referencedDateable;
@@ -23,15 +23,10 @@ public class BookSelect : MonoBehaviour, IPointerEnterHandler, IPointerClickHand
         
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        Debug.Log("HOVERED!");
-        textName.text = referencedDateable.Name;
-        textDesc.text = referencedDateable.Description;
-    }
-
     public void OnPointerClick(PointerEventData eventData)
     {
-        Debug.Log("THAT SOB CLICKED ME!");
+        textName.text = referencedDateable.Name;
+        textDesc.text = referencedDateable.Description;
+        GameObject.Find("DateableBook").GetComponent<Book>().SelectedDateable = referencedDateable;
     }
 }
