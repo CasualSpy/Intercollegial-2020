@@ -3859,7 +3859,6 @@ GameObject:
   - component: {fileID: 1492842901}
   - component: {fileID: 1492842904}
   - component: {fileID: 1492842903}
-  - component: {fileID: 1492842902}
   m_Layer: 5
   m_Name: ShopText
   m_TagString: Untagged
@@ -3889,18 +3888,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.2138176, y: -73.26489}
   m_SizeDelta: {x: 1727.6, y: 283.9}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1492842902
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1492842900}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45cb1399791835242a19bd585cc10fae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1492842903
 MonoBehaviour:
   m_ObjectHideFlags: 0
