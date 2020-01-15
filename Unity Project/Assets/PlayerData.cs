@@ -77,6 +77,7 @@ public class PlayerData : MonoBehaviour
                             Gold += parsedGold;
                         break;
                     case "background":
+                        GameObject.Find("Background").GetComponent<BackgroundController>().SetBackground(value);
                         break;
                 }
             }
