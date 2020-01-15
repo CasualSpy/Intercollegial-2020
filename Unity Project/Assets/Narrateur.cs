@@ -8,11 +8,12 @@ public class Narrateur : MonoBehaviour
 
     public PlayerData playerData;
     public VIDE_Assign VIDE;
-
+    DialogueManager dialogueManager;
 
     private void Start()
     {
         playerData = GameObject.Find("Player").GetComponent<PlayerData>();
+        dialogueManager = GameObject.Find("Player").GetComponent<DialogueManager>();
         VIDE = GetComponent<VIDE_Assign>();
     }
 
@@ -28,5 +29,13 @@ public class Narrateur : MonoBehaviour
             VD.EndDialogue();
             playerData.StartDialog(GameObject.Find("Boulanger").GetComponent<Dateable>());
         }
+    }
+
+    public void GoCentralPlace()
+    {
+        VD.EndDialogue();
+        dialogueManager.CurrentNPC = VIDE;
+        VD.SetNode(1);
+        dialogueManager.Begin();
     }
 }
