@@ -9,6 +9,8 @@ public class Dateable : MonoBehaviour
     public string Description;
     public List<Emotion> Emotions;
     public float Suspicion;
+    public Dialogues dialogues;
+
 
     private void Start()
     {

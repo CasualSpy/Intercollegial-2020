@@ -20,9 +20,13 @@ public class DialogueWindowScript : MonoBehaviour
         
     }
 
-    public void SetText(string title, string text)
+    public void SetText(string text)
     {
-        titleText.text = title;
         contentText.text = text;
+    }
+
+    public void SetSpeaker(string speaker)
+    {
+        titleText.text = speaker;
     }
 }
