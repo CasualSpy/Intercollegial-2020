@@ -47,6 +47,8 @@ public class NPCTest : MonoBehaviour
                 Debug.Log(item);
             }
         }
+
+        
         
         UpdateText();
     }
