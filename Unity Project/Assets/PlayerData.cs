@@ -45,7 +45,7 @@ public class PlayerData : MonoBehaviour
 
     void HandleTriggers(string trigger)
     {
-        Regex rx = new Regex("([\\w\\d]+):([\\w\\d]+)[;$]");
+        Regex rx = new Regex("([\\w\\d]+?):([\\w\\d]+?);");
         MatchCollection matches = rx.Matches(trigger);
         foreach (Match match in matches)
         {
