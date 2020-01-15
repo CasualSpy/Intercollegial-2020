@@ -22,6 +22,7 @@ public class PlayerData : MonoBehaviour
 
     private void Start()
     {
+        Gold = 5;
     }
 
     public List<Item> Inventory { get; set; }
