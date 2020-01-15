@@ -53,7 +53,7 @@ public class PlayerData : MonoBehaviour
                 string triggerName = match.Groups[i].Value;
                 string value = match.Groups[i + 1].Value;
 
-                switch(triggerName)
+                switch(triggerName.ToLower())
                 {
                     // Change NPC sprite to display another emotion
                     case "emotion":
