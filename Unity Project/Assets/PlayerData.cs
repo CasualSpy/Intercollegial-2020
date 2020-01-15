@@ -36,6 +36,11 @@ public class PlayerData : MonoBehaviour
         Tags = new List<string>();
     }
 
+    public bool HasTag(string tag)
+    {
+        return Tags.Contains(tag);
+    }
+
     public PlayerData GetInstance()
     {
         if (instance == null)
