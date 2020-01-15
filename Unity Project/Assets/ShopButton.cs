@@ -12,7 +12,7 @@ public class ShopButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     private void Start()
     {
-        GetComponentInChildren<TextMeshProUGUI>().text = $"{Item.Item} - {Item.Price}$";
+        GetComponentInChildren<TextMeshProUGUI>().text = $"{Item.Item.ToString().Replace('_', ' ')} - {Item.Price}$";
 
         GetComponent<Button>().onClick.AddListener(ShopButton_onClick);
     }
