@@ -8,10 +8,9 @@ using UnityEngine.UI;
 public class PlayerData : MonoBehaviour
 {
     private static PlayerData instance = null;
-    private bool InDialog = false;
     public Dateable TalkingTo;
-    private bool WaitForInput = false;
     DialogueManager dialogueManager;
+    public List<string> Tags;
     public enum Item
     {
         None,
@@ -29,12 +28,18 @@ public class PlayerData : MonoBehaviour
         dialogueManager = GetComponent<DialogueManager>();
     }
 
-    public List<Item> Inventory { get; set; }
+    public List<InventorySlot> Inventory { get; set; }
     public int Gold { get; set; }
 
-    private PlayerData()
+    public PlayerData()
     {
-        Inventory = new List<Item>();
+        Inventory = new List<InventorySlot>();
+        Tags = new List<string>();
+    }
+
+    public bool HasTag(string tag)
+    {
+        return Tags.Contains(tag);
     }
 
     public PlayerData GetInstance()
@@ -42,6 +47,39 @@ public class PlayerData : MonoBehaviour
         if (instance == null)
             instance = new PlayerData();
         return instance;
+    }
+    
+    public void AddInventoryItem(Item item)
+    {
+        int index = Inventory.FindIndex(x => x.Item == item);
+        if(index == -1)
+        {
+            Inventory.Add(new InventorySlot(item));
+        }
+        else
+        {
+            InventorySlot toModify = Inventory[index];
+            toModify.Count++;
+            Inventory[index] = toModify;
+        }
+    }
+
+    public void RemoveInventoryItem(Item item)
+    {
+        int index = Inventory.FindIndex(x => x.Item == item);
+        if (index != -1)
+        {
+            if (Inventory[index].Count > 1)
+            {
+                InventorySlot toModify = Inventory[index];
+                toModify.Count--;
+                Inventory[index] = toModify;
+            }
+            else
+            {
+                Inventory.RemoveAt(index);
+            }
+        }
     }
 
     public void StartDialog(Dateable dateable)
@@ -51,25 +89,19 @@ public class PlayerData : MonoBehaviour
 
         dialogueManager.CurrentNPC = dateable.VIDE;
         dialogueManager.Begin();
-
-        //TalkingTo.dialogues.Reset();
-        //ReadCurrentDialog();
     }
 
-    void HandleTriggers(string trigger)
-    {
-        Regex rx = new Regex("([\\w\\d]+?):([\\w\\d]+?);");
-        MatchCollection matches = rx.Matches(trigger);
-        foreach (Match match in matches)
-        {
-            for (int i = 1; i < match.Groups.Count; i+=2)
-            {
-                string triggerName = match.Groups[i].Value;
-                string value = match.Groups[i + 1].Value;
-                Events(triggerName, value);
-            }
-        }
-    }
+        //Regex rx = new Regex("([\\w\\d]+?):([\\w\\d]+?);");
+        //MatchCollection matches = rx.Matches(trigger);
+        //foreach (Match match in matches)
+        //{
+        //    for (int i = 1; i < match.Groups.Count; i+=2)
+        //    {
+        //        string triggerName = match.Groups[i].Value;
+        //        string value = match.Groups[i + 1].Value;
+        //        Events(triggerName, value);
+        //    }
+        //}
 
     public void Yeet(string s, int i)
     {
@@ -96,11 +128,11 @@ public class PlayerData : MonoBehaviour
                 break;
             // Add new item to inventory
             case "addInventory":
-                Inventory.Add((Item)Enum.Parse(typeof(Item), value));
+                AddInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Remove item from inventory
             case "removeInventory":
-                Inventory.Remove((Item)Enum.Parse(typeof(Item), value));
+                RemoveInventoryItem((Item)Enum.Parse(typeof(Item), value));
                 break;
             // Add to player's gold (negative value to remove
             case "gold":
@@ -116,40 +148,15 @@ public class PlayerData : MonoBehaviour
             case "speaker":
                 GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetSpeaker(value);
                 break;
+            case "addTag":
+                Tags.Add(value);
+                break;
         }
     }
 
     public void NextDialog()
     {
         dialogueManager.Next();
-
-        //TalkingTo.dialogues.Next();
-        //ReadCurrentDialog();
-    }
-
-    void ReadCurrentDialog()
-    {
-        //string dialog = TalkingTo.dialogues.GetCurrentDialogue();
-        //GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetText(dialog);
-        //Dialogues dialogues = TalkingTo.dialogues;
-        //if (TalkingTo.dialogues.HasTrigger())
-        //    HandleTriggers(TalkingTo.dialogues.GetTrigger());
-
-        //string[] choices = TalkingTo.dialogues.GetChoices();
-
-        //if (choices.Length > 0)
-        //{
-        //    //Decisions!
-        //    GameObject.Find("ChoiceBox").GetComponent<DecisionWindow>().PromptUser(choices[0], choices[1], choices[2]);
-        //    WaitForInput = true;
-        //}
-    }
-
-    public void RecieveChoice(string choice)
-    {
-        //WaitForInput = false;
-        //TalkingTo.dialogues.NextChoice(choice);
-        //ReadCurrentDialog();
     }
 
     public void ShowBook()
