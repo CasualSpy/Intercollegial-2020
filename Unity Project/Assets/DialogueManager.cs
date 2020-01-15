@@ -4,6 +4,7 @@ using UnityEngine;
 using TMPro;
 using VIDE_Data;
 using System;
+using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -64,6 +65,18 @@ public class DialogueManager : MonoBehaviour
             {
                 if (i < data.comments.Length)
                 {
+                    //data.creferences[0].
+                    bool available = true;
+
+                    string extraData = "HasPoison;IsNight;";
+                    string[] tagsToCheck = extraData.Split(';');
+                    foreach (string tag in tagsToCheck)
+                    {
+                        //if (!playerData.HasTag(tag))
+                            available = false;
+                    }
+
+                    text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
                     text_Choices[i].transform.parent.gameObject.SetActive(true);
                     text_Choices[i].text = data.comments[i];
                 }
