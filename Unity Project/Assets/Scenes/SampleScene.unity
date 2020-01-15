@@ -313,7 +313,7 @@ RectTransform:
   - {fileID: 1144630026}
   - {fileID: 2132467484}
   m_Father: {fileID: 1622791095}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -461,7 +461,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 434042916}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 525393027}
+        m_MethodName: NextDialog
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &434042916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,18 +509,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434042913}
   m_CullTransparentMesh: 0
---- !u!114 &456238875 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-    type: 3}
-  m_PrefabInstance: {fileID: 1132576764}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46fbc530e5f7f142b9b2f189d2ee79c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -681,98 +680,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b43dbf22d27243a43a63eb1f396a0c15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &602322148 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-    type: 3}
-  m_PrefabInstance: {fileID: 649712431}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46fbc530e5f7f142b9b2f189d2ee79c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!1001 &649712431
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 977818338096401762, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_Name
-      value: Francois Lesage
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Name
-      value: Francois Lesage
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Description
-      value: "Biblioth\xE9caire, a\xEEn\xE9 de la ville, tranquille mais observant,
-        aime les vieilles histoires"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e6e56d710412944cb4e70778b63a539, type: 3}
 --- !u!1 &687235551
 GameObject:
   m_ObjectHideFlags: 0
@@ -1812,108 +1719,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062327838}
   m_CullTransparentMesh: 0
---- !u!1001 &1071613085
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 977818338096401762, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_Name
-      value: Gaston Dubois
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Emotions.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Name
-      value: Gaston Dubois
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Emotions.Array.data[0].image
-      value: 
-      objectReference: {fileID: 21300000, guid: e9d13661f3e63a441ab8b230623d330e,
-        type: 3}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Description
-      value: "Bucheron, tr\xE8s gourmand, jovial et insouciant"
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e6e56d710412944cb4e70778b63a539, type: 3}
---- !u!114 &1071613086 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-    type: 3}
-  m_PrefabInstance: {fileID: 1071613085}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e46fbc530e5f7f142b9b2f189d2ee79c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1125789660
 GameObject:
   m_ObjectHideFlags: 0
@@ -2007,85 +1812,6 @@ MonoBehaviour:
     background: HouseDay
   - image: {fileID: 21300000, guid: ce12b9393c191614d8f7234f5e6ff918, type: 3}
     background: HouseNight
---- !u!1001 &1132576764
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 977818338096401762, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_Name
-      value: Armand Beauregard
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979692425792206557, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Name
-      value: Armand Beauregard
-      objectReference: {fileID: 0}
-    - target: {fileID: 9124914091269867188, guid: 6e6e56d710412944cb4e70778b63a539,
-        type: 3}
-      propertyPath: Description
-      value: Maire de la ville, ivrogne incorrigible, anxieux et violent
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 6e6e56d710412944cb4e70778b63a539, type: 3}
 --- !u!1 &1144630025
 GameObject:
   m_ObjectHideFlags: 0
@@ -2404,7 +2130,7 @@ RectTransform:
   - {fileID: 845466195}
   - {fileID: 434042914}
   m_Father: {fileID: 1622791095}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2508,7 +2234,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1296650706
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2529,7 +2255,7 @@ RectTransform:
   - {fileID: 1031883866}
   - {fileID: 1062327839}
   m_Father: {fileID: 1622791095}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2682,7 +2408,7 @@ PrefabInstance:
         type: 3}
       propertyPath: referencedDateable
       value: 
-      objectReference: {fileID: 456238875}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a8bf6d626825b4bbaf367823a1e57e, type: 3}
 --- !u!224 &1349703680 stripped
@@ -2878,7 +2604,7 @@ PrefabInstance:
         type: 3}
       propertyPath: referencedDateable
       value: 
-      objectReference: {fileID: 602322148}
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a8bf6d626825b4bbaf367823a1e57e, type: 3}
 --- !u!224 &1459710770 stripped
@@ -3124,6 +2850,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1125789661}
+  - {fileID: 1787703237}
   - {fileID: 1148581283}
   - {fileID: 233165282}
   - {fileID: 1296650706}
@@ -3135,6 +2862,290 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1787703236
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1787703237}
+  - component: {fileID: 1787703241}
+  - component: {fileID: 1787703240}
+  - component: {fileID: 1787703239}
+  - component: {fileID: 1787703238}
+  m_Layer: 5
+  m_Name: Gaston Dubois
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1787703237
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787703236}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1622791095}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -391.63, y: -5.8279}
+  m_SizeDelta: {x: 1106.2, y: 1451.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1787703238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787703236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e46fbc530e5f7f142b9b2f189d2ee79c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Gaston Dubois
+  Description: "Bucheron, tr\xE8s gourmand, jovial et insouciant"
+  Emotions:
+  - image: {fileID: 21300000, guid: e41d3cbd16e48ea458fb6cefa835ab5c, type: 3}
+    emotion: Normal
+  - image: {fileID: 21300000, guid: 319c3c8c84b4f9d4abb3f61f8eebf7e1, type: 3}
+    emotion: "Fach\xE9"
+  Suspicion: 0
+  dialogues: {fileID: 0}
+--- !u!114 &1787703239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787703236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6a762bd19625924aa32f553b1a78715, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Set:
+  - CurrentId: 15
+    NewWindowOpen: 0
+    FirstWindow:
+      ID: 0
+      Size:
+        serializedVersion: 2
+        x: 28
+        y: 199
+        width: 150
+        height: 125
+      Text: Salut moi c'est Gaston!
+      Type: 0
+      NodeType: 0
+      Parent: -1
+      Trigger: 1
+      TriggerText: speaker:Gaston;emotion:Normal;background:GrandPlace
+      Connections: 01000000
+    Windows:
+    - ID: 0
+      Size:
+        serializedVersion: 2
+        x: 28
+        y: 199
+        width: 150
+        height: 125
+      Text: Salut moi c'est Gaston!
+      Type: 0
+      NodeType: 0
+      Parent: -1
+      Trigger: 1
+      TriggerText: speaker:Gaston;emotion:Normal;background:GrandPlace
+      Connections: 01000000
+    - ID: 1
+      Size:
+        serializedVersion: 2
+        x: 188
+        y: 199
+        width: 150
+        height: 125
+      Text: C'est quoi ton nom?
+      Type: 0
+      NodeType: 1
+      Parent: 0
+      Trigger: 0
+      TriggerText: 
+      Connections: 06000000
+    - ID: 6
+      Size:
+        serializedVersion: 2
+        x: 348
+        y: 199
+        width: 150
+        height: 125
+      Text: Moi c'est la Corriveau! Viens chez moi! *wink* *wink*
+      Type: 0
+      NodeType: 1
+      Parent: 1
+      Trigger: 1
+      TriggerText: speaker:Corriveau;
+      Connections: 07000000
+    - ID: 7
+      Size:
+        serializedVersion: 2
+        x: 508
+        y: 199
+        width: 150
+        height: 125
+      Text: Ok
+      Type: 0
+      NodeType: 1
+      Parent: 6
+      Trigger: 1
+      TriggerText: speaker:Gaston;emotion:Normal;background:HouseDay
+      Connections: 08000000
+    - ID: 8
+      Size:
+        serializedVersion: 2
+        x: 668
+        y: 199
+        width: 150
+        height: 125
+      Text: Tu veux me tuer?
+      Type: 1
+      NodeType: 1
+      Parent: 7
+      Trigger: 0
+      TriggerText: 
+      Connections: 090000000a0000000d000000
+    - ID: 9
+      Size:
+        serializedVersion: 2
+        x: 858
+        y: 258
+        width: 150
+        height: 125
+      Text: Non!
+      Type: 2
+      NodeType: 1
+      Parent: 8
+      Trigger: 0
+      TriggerText: 
+      Connections: 0c000000
+    - ID: 10
+      Size:
+        serializedVersion: 2
+        x: 853
+        y: 67
+        width: 150
+        height: 125
+      Text: Oui!
+      Type: 2
+      NodeType: 1
+      Parent: 8
+      Trigger: 0
+      TriggerText: 
+      Connections: 0b000000
+    - ID: 11
+      Size:
+        serializedVersion: 2
+        x: 1013
+        y: 67
+        width: 150
+        height: 125
+      Text: OH FUCK!
+      Type: 0
+      NodeType: 2
+      Parent: 10
+      Trigger: 1
+      TriggerText: "speaker:Gaston;emotion:Fach\xE9;"
+      Connections: 
+    - ID: 12
+      Size:
+        serializedVersion: 2
+        x: 1018
+        y: 258
+        width: 150
+        height: 125
+      Text: Fiou!
+      Type: 0
+      NodeType: 2
+      Parent: 9
+      Trigger: 0
+      TriggerText: 
+      Connections: 
+    - ID: 13
+      Size:
+        serializedVersion: 2
+        x: 709
+        y: 417
+        width: 150
+        height: 125
+      Text: "Peut-\xEAtre?!"
+      Type: 2
+      NodeType: 1
+      Parent: 8
+      Trigger: 0
+      TriggerText: 
+      Connections: 0e000000
+    - ID: 14
+      Size:
+        serializedVersion: 2
+        x: 880
+        y: 431
+        width: 150
+        height: 125
+      Text: "Le doute a fait chang\xE9 le jour pour la nuit!"
+      Type: 0
+      NodeType: 2
+      Parent: 13
+      Trigger: 1
+      TriggerText: background:HouseNight;
+      Connections: 
+  CurrentSet: 0
+  TabList:
+  - Initial
+--- !u!114 &1787703240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787703236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: e41d3cbd16e48ea458fb6cefa835ab5c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1787703241
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787703236}
+  m_CullTransparentMesh: 0
 --- !u!1 &1819431123
 GameObject:
   m_ObjectHideFlags: 0
@@ -3716,7 +3727,7 @@ PrefabInstance:
         type: 3}
       propertyPath: referencedDateable
       value: 
-      objectReference: {fileID: 1071613086}
+      objectReference: {fileID: 1787703238}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 20a8bf6d626825b4bbaf367823a1e57e, type: 3}
 --- !u!224 &2476727231881001362 stripped

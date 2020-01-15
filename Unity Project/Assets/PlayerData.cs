@@ -39,7 +39,8 @@ public class PlayerData : MonoBehaviour
         Debug.Log("Starting dialog with " + dateable.Name);
         TalkingTo = dateable;
 
-        //TODO actually start the dialogue
+        TalkingTo.dialogues.Reset();
+        ReadCurrentDialog();
     }
 
     void HandleTriggers(string trigger)
@@ -114,7 +115,7 @@ public class PlayerData : MonoBehaviour
         if (choices.Length > 0)
         {
             //Decisions!
-            GameObject.Find("TextBox").GetComponent<DecisionWindow>().PromptUser(choices[0], choices[1], choices[2]);
+            GameObject.Find("ChoiceBox").GetComponent<DecisionWindow>().PromptUser(choices[0], choices[1], choices[2]);
             WaitForInput = true;
         }
     }

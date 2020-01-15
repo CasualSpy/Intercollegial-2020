@@ -9,12 +9,15 @@ public class Dateable : MonoBehaviour
     public string Description;
     public List<Emotion> Emotions;
     public float Suspicion;
+    [HideInInspector]
     public Dialogues dialogues;
 
 
     private void Start()
     {
-        GetComponent<Dialogues>().SetTree("Initial"); 
+        dialogues = GetComponent<Dialogues>();
+        dialogues.SetTree("Initial"); 
+
     }
 
     public void SetEmotion(string emotion)
