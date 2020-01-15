@@ -2879,9 +2879,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1296650705}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!114 &1296650708
 MonoBehaviour:
@@ -3307,6 +3307,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Boulanger
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -3810,6 +3815,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Shop
+      objectReference: {fileID: 0}
+    - target: {fileID: 6722724450631722939, guid: 2fe62bcd4b823524691dbd471c6c19ac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6722724450671174836, guid: 2fe62bcd4b823524691dbd471c6c19ac,
         type: 3}

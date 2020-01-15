@@ -68,7 +68,7 @@ public class DialogueManager : MonoBehaviour
                     //data.creferences[0].
                     bool available = true;
 
-                    string extraData = "HasPoison;IsNight;";
+                    string extraData = data.creferences[i].extraData;
                     string[] tagsToCheck = extraData.Split(';');
                     foreach (string tag in tagsToCheck)
                     {

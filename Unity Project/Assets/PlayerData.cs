@@ -19,7 +19,8 @@ public class PlayerData : MonoBehaviour
         Sucre,
         Fleurs,
         Pelle,
-        LivreLocal
+        LivreLocal,
+        Poison
     }
 
     private void Start()
@@ -68,6 +69,11 @@ public class PlayerData : MonoBehaviour
                 Events(triggerName, value);
             }
         }
+    }
+
+    public void Yeet(string s, int i)
+    {
+
     }
 
     public void Events(string name, string value)
