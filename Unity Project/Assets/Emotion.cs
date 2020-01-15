@@ -2,7 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Emotion : MonoBehaviour
+[System.Serializable]
+public struct Emotion
 {
     public Sprite image;
     public string emotion;

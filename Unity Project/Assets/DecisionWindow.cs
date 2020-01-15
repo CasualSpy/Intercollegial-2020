@@ -47,6 +47,8 @@ public class DecisionWindow : MonoBehaviour
 
     public void PromptUser(string choice1, string choice2, string choice3)
     {
+        //TODO make 2 choices
+
         canvasGroup.interactable = true;
         canvasGroup.alpha = 1;
 
