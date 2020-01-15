@@ -11,13 +11,14 @@ public class Dateable : MonoBehaviour
     public float Trust;
     [HideInInspector]
     public Dialogues dialogues;
-
+    public VIDE_Assign VIDE;
 
     private void Start()
     {
-        dialogues = GetComponent<Dialogues>();
-        dialogues.SetTree("Initial"); 
-
+        //dialogues = GetComponent<Dialogues>();
+        //dialogues.SetTree("Initial");
+        VIDE = GetComponent<VIDE_Assign>();
+        
     }
 
     public void SetEmotion(string emotion)
@@ -29,5 +30,10 @@ public class Dateable : MonoBehaviour
         {
             Debug.LogError(e);
         }
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        GetComponent<Image>().sprite = sprite;
     }
 }

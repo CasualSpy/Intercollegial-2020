@@ -247,7 +247,7 @@ public class DialogueSystem : EditorWindow {
 
 
         //If this is the first window
-        if (Curr == CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow)
+        if (Curr.NodeType == Dialogues.NodeType.Start)
         {
             Dialogues.Window NewlyCreatedWindow = CreateNewWindow(Curr.Size.position - new Vector2(160, 0),-1);
             //The newly created window adds the first node as a connection
@@ -289,7 +289,7 @@ public class DialogueSystem : EditorWindow {
         ClearIds();
 
         //If the window we're removing is the start window, we have a custom check
-        if (Curr == CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow)
+        if (Curr.NodeType == Dialogues.NodeType.Start)
         {
             //We don't allow the user to remove the first node
             if (Curr.Connections.Count == 0)
@@ -311,7 +311,7 @@ public class DialogueSystem : EditorWindow {
         {
             if (Curr.Connections.Count > 1 && PrevWindow.Type == Dialogues.WindowTypes.Text)
                 PrevWindow.Type = Dialogues.WindowTypes.Choice;
-            if (PrevWindow == CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow)
+            if (PrevWindow.NodeType == Dialogues.NodeType.Start)
                 AddWindowBefore(PrevWindow);
             //Removes the window from existence
             PrevWindow.Connections.Remove(Curr.ID);
@@ -329,7 +329,7 @@ public class DialogueSystem : EditorWindow {
     {
         Dialogues.Window Curr = (Dialogues.Window)win;
         //If this is the first node, removes everything
-        if (Curr == CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow)
+        if (Curr.NodeType == Dialogues.NodeType.Start)
         {
             if (Curr.Connections.Count == 0)
                 CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow = null;
@@ -542,7 +542,7 @@ public class DialogueSystem : EditorWindow {
                     break;
             }
             //Determines what type of node it is
-            if (WindowList.Connections.Count == 0 && WindowList != CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow && WindowList.Type != Dialogues.WindowTypes.Choice)
+            if (WindowList.Connections.Count == 0 && WindowList.NodeType != Dialogues.NodeType.Start && WindowList.Type != Dialogues.WindowTypes.Choice)
                 WindowList.NodeType = Dialogues.NodeType.End;
             else if (WindowList.ID == CurrentDialogue.Set[CurrentDialogue.CurrentSet].FirstWindow.ID)
                 WindowList.NodeType = Dialogues.NodeType.Start;

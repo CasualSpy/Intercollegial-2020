@@ -30,20 +30,6 @@ public class DecisionWindow : MonoBehaviour
 
     }
 
-    public void Choice1()
-    {
-        ReturnChoice(textChoice1.text);
-    }
-
-    public void Choice2()
-    {
-        ReturnChoice(textChoice2.text);
-    }
-
-    public void Choice3()
-    {
-        ReturnChoice(textChoice3.text);
-    }
 
     public void PromptUser(string choice1, string choice2, string choice3)
     {
@@ -58,11 +44,11 @@ public class DecisionWindow : MonoBehaviour
         textChoice3.text = choice3;
     }
 
-    void ReturnChoice(string choice)
-    {
-        canvasGroup.alpha = 0;
-        canvasGroup.interactable = false;
-        Debug.Log("You chose:" + choice);
-        GameObject.Find("Player").GetComponent<PlayerData>().RecieveChoice(choice);
-    }
+    //void ReturnChoice(string choice)
+    //{
+    //    canvasGroup.alpha = 0;
+    //    canvasGroup.interactable = false;
+    //    Debug.Log("You chose:" + choice);
+    //    GameObject.Find("Player").GetComponent<PlayerData>().RecieveChoice(choice);
+    //}
 }
