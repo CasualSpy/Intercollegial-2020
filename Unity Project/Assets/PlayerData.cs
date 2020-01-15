@@ -16,7 +16,7 @@ public class PlayerData : MonoBehaviour
         None,
         Farine,
         Sucre,
-        FleursToxiques,
+        Fleurs_Toxiques,
         Pelle,
         LivreLocal,
         Poison
