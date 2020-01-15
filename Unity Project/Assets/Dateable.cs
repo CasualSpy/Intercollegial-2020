@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Dateable : MonoBehaviour
 {
     public string Name;
+    public string Description;
     public List<Emotion> Emotions;
     public float Suspicion;
 
