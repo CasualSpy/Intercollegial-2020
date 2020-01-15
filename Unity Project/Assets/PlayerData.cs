@@ -40,6 +40,11 @@ public class PlayerData : MonoBehaviour
         return Tags.Contains(tag);
     }
 
+    public bool HasEnoughItem(Item item, int qty)
+    {
+        return Inventory.Find(x => x.Item == item).Count > qty;
+    }
+
     public void AddInventoryItem(Item item)
     {
         int index = Inventory.FindIndex(x => x.Item == item);

@@ -54,6 +54,13 @@ public class DialogueManager : MonoBehaviour
         VD.BeginDialogue(CurrentNPC);
     }
 
+    [Serializable]
+    private struct JSONCheck
+    {
+        public List<string> tags;
+        public List<InventorySlot> items;
+    }
+
     void UpdateUI(VD.NodeData data)
     {
         container_NPC.SetActive(false);
@@ -65,16 +72,22 @@ public class DialogueManager : MonoBehaviour
             {
                 if (i < data.comments.Length)
                 {
-                    //data.creferences[0].
                     bool available = true;
 
-                    string extraData = "HasPoison;IsNight;";
-                    string[] tagsToCheck = extraData.Split(';');
-                    foreach (string tag in tagsToCheck)
+                    string extraData = data.creferences[i].extraData;
+
+                    JSONCheck checks = JsonUtility.FromJson<JSONCheck>(data.creferences[i].extraData);
+                    foreach (string tag in checks.tags)
                     {
-                        //if (!playerData.HasTag(tag))
+                        if (!playerData.HasTag(tag))
                             available = false;
                     }
+                    foreach (InventorySlot item in checks.items)
+                    {
+                        if (!playerData.HasEnoughItem(item.Item, item.Count))
+                            available = false;
+                    }
+
 
                     text_Choices[i].transform.parent.gameObject.GetComponent<Button>().interactable = available;
                     text_Choices[i].transform.parent.gameObject.SetActive(true);
