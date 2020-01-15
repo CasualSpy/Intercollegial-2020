@@ -2,10 +2,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
-    public void Buy(ShopItem item)
+    public static void Buy(ShopItem item)
     {
         if (item.Item == PlayerData.Item.None)
             return;
@@ -15,6 +16,11 @@ public class ShopManager : MonoBehaviour
         {
             player.Gold -= item.Price;
             player.Inventory.Add(item.Item);
+            GameObject.Find("Description").GetComponent<TextMeshProUGUI>().text = $"Vous achetez 1 {item.Item.ToString()}";
+        }
+        else
+        {
+            GameObject.Find("Description").GetComponent<TextMeshProUGUI>().text = $"Il vous manque {item.Price - player.Gold}$";
         }
     }
 

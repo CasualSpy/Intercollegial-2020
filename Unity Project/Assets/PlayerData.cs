@@ -24,6 +24,7 @@ public class PlayerData : MonoBehaviour
 
     private void Start()
     {
+        Gold = 5;
         dialogueManager = GetComponent<DialogueManager>();
     }
 
