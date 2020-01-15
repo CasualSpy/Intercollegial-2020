@@ -15,7 +15,7 @@ public class ShopManager : MonoBehaviour
         if (player.Gold >= item.Price)
         {
             player.Gold -= item.Price;
-            player.Inventory.Add(item.Item);
+            player.AddInventoryItem(item.Item);
             GameObject.Find("Description").GetComponent<TextMeshProUGUI>().text = $"Vous achetez 1 {item.Item.ToString()}";
         }
         else
