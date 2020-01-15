@@ -7,7 +7,6 @@ using UnityEngine.UI;
 
 public class PlayerData : MonoBehaviour
 {
-    private static PlayerData instance = null;
     public Dateable TalkingTo;
     DialogueManager dialogueManager;
     public List<string> Tags;
@@ -41,13 +40,6 @@ public class PlayerData : MonoBehaviour
         return Tags.Contains(tag);
     }
 
-    public PlayerData GetInstance()
-    {
-        if (instance == null)
-            instance = new PlayerData();
-        return instance;
-    }
-    
     public void AddInventoryItem(Item item)
     {
         int index = Inventory.FindIndex(x => x.Item == item);
