@@ -54,30 +54,41 @@ public class PlayerData : MonoBehaviour
 
                 switch(triggerName)
                 {
+                    // Change NPC sprite to display another emotion
                     case "emotion":
                         TalkingTo.SetEmotion(value);
                         break;
+                    // Add to NPC suspicion value (negative value to remove)
                     case "suspicion":
                         float parsed = 0f;
                         if (float.TryParse(value, out parsed))
                             TalkingTo.Suspicion += parsed;
                         break;
+                    // Set new dialog tree
                     case "tree":
                         TalkingTo.GetComponent<Dialogues>().SetTree(value);
                         break;
+                    // Add new item to inventory
                     case "addInventory":
                         Inventory.Add((Item)Enum.Parse(typeof(Item), value));
                         break;
+                    // Remove item from inventory
                     case "removeInventory":
                         Inventory.Remove((Item)Enum.Parse(typeof(Item), value));
                         break;
+                    // Add to player's gold (negative value to remove
                     case "gold":
                         int parsedGold = 0;
                         if (int.TryParse(value, out parsedGold))
                             Gold += parsedGold;
                         break;
+                    // Change background sprite
                     case "background":
                         GameObject.Find("Background").GetComponent<BackgroundController>().SetBackground(value);
+                        break;
+                    // Change speaker name during dialog
+                    case "speaker":
+                        GameObject.Find("TextBox").GetComponent<DialogueWindowScript>().SetSpeaker(value);
                         break;
                 }
             }
