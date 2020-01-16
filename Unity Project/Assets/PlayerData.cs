@@ -36,6 +36,24 @@ public class PlayerData : MonoBehaviour
         dialogueManager.Begin();
     }
 
+    public void RestartGame()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+    }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
+
+    public void ShowWinScreen()
+    {
+        CanvasGroup winscreen = GameObject.Find("WinScreen").GetComponent<CanvasGroup>();
+        winscreen.alpha = 1;
+        winscreen.interactable = true;
+        winscreen.blocksRaycasts = true;
+    }
+
     public void RollCredits()
     {
         CanvasGroup mainMenu = GameObject.Find("MainMenu").GetComponent<CanvasGroup>();
@@ -211,6 +229,9 @@ public class PlayerData : MonoBehaviour
                 break;
             case "addtag":
                 Tags.Add(value);
+                break;
+            case "removeTag":
+                Tags.Remove(value);
                 break;
         }
     }

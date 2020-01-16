@@ -113,4 +113,20 @@ public class Narrateur : MonoBehaviour
             playerData.StartDialog(francois);
         }
     }
+
+    public void ArmanCanYeet()
+    {
+        if (playerData.HasTag("canYeet"))
+            playerData.Tags.Remove("canYeet");
+        if (playerData.HasTag("isDrunk") && playerData.TalkingTo.Trust <= 1)
+        {
+            playerData.Tags.Add("canYeet");
+        }
+    }
+
+    public void End()
+    {
+        VD.EndDialogue();
+        playerData.ShowWinScreen();
+    }
 }
