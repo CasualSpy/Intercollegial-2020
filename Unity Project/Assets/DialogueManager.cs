@@ -55,8 +55,7 @@ public class DialogueManager : MonoBehaviour
     }
 
     [Serializable]
-    private struct JSONCheck
-    {        public List<string> tags;
+    private struct JSONCheck    {        public List<string> tags;
         public List<InventorySlot> items;
         public int trust;
     }
