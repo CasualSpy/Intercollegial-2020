@@ -82,8 +82,10 @@ public class Narrateur : MonoBehaviour
     public void GastonTrustSplit()
     {
         Dateable gaston = GameObject.Find("Gaston").GetComponent<Dateable>();
+        Debug.Log("Gaston trust:" + gaston.Trust);
         if (gaston.Trust >= 4)
         {
+            
             //Can suggest meeting
             VD.SetNode(25);
         }
@@ -107,6 +109,7 @@ public class Narrateur : MonoBehaviour
         } else
         {
             VD.EndDialogue();
+            //playerData.TalkingTo = francois;
             playerData.StartDialog(francois);
         }
     }

@@ -6287,6 +6287,21 @@ PrefabInstance:
       value: "Biblioth\xE9caire, a\xEEn\xE9 de la ville, tranquille mais observant,
         aime les vieilles histoires."
       objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedIndex
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedID
+      value: 35826
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854571, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: assignedDialogue
+      value: Francois
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6cc22ed73fc2a408b27c218040b7ae, type: 3}
 --- !u!224 &2060997505 stripped
