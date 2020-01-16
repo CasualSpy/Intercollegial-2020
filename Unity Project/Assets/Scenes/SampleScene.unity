@@ -564,7 +564,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -829,7 +829,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_Name
-      value: Armand Beauregard
+      value: Armand
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -889,22 +889,22 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -0.012554
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 1019
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1000
+      value: 1080
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -1449,7 +1449,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 72
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -1609,7 +1609,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -2490,7 +2490,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 100
+  m_fontSize: 72
   m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2617,10 +2617,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Musique de : https://filmmusic.io
+  m_text: 'Musique de : https://filmmusic.io
 
     "Achaidh Cheide" par Kevin MacLeod
-    (https://incompetech.com)
+    (https://incompetech.com)
 
     Licence: CC BY (http://creativecommons.org/licenses/by/4.0/)'
   m_isRightToLeft: 0
@@ -2691,7 +2691,7 @@ MonoBehaviour:
   m_margin: {x: -825.65155, y: 0, z: -784.6619, w: -128.82503}
   m_textInfo:
     textComponent: {fileID: 965793914}
-    characterCount: 157
+    characterCount: 155
     spriteCount: 0
     spaceCount: 13
     wordCount: 23
@@ -2939,7 +2939,7 @@ MonoBehaviour:
   m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -3398,7 +3398,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3644,7 +3644,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 72
+  m_fontSize: 24
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5187,7 +5187,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_Name
-      value: Francois Lesage
+      value: Francois
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -5247,22 +5247,22 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 29.6
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 13.425
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 1000
+      value: 1103.2
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 1000
+      value: 1106.9
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -5619,7 +5619,7 @@ PrefabInstance:
     - target: {fileID: 7728592204993854568, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_Name
-      value: Gaston Dubois
+      value: Gaston
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
@@ -5679,22 +5679,22 @@ PrefabInstance:
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -339.3
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -39.7
+      value: 2.55
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 835.5
+      value: 827.4
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 983.9
+      value: 1084.8
       objectReference: {fileID: 0}
     - target: {fileID: 7728592204993854569, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
         type: 3}

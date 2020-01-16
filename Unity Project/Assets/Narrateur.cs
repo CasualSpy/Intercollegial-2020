@@ -37,22 +37,22 @@ public class Narrateur : MonoBehaviour
         dialogueManager.CurrentNPC = VIDE;
         dialogueManager.Begin();
         VD.SetNode(1);
+        //VD.isActive
     }
 
     public void GastonLogic()
     {
-        Dateable gaston = GameObject.Find("Boulanger").GetComponent<Dateable>();
+        Dateable gaston = GameObject.Find("Gaston").GetComponent<Dateable>();
 
         VD.EndDialogue();
-        dialogueManager.CurrentNPC = gaston.VIDE;
-        dialogueManager.Begin();
+        playerData.StartDialog(GameObject.Find("Boulanger").GetComponent<Dateable>());
     }
 
     public void GoSellStuff()
     {
         VD.EndDialogue();
         dialogueManager.CurrentNPC = VIDE;
-        VD.SetNode(23);
         dialogueManager.Begin();
+        VD.SetNode(23);
     }
 }
