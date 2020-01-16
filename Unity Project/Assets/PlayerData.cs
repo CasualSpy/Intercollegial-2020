@@ -16,25 +16,66 @@ public class PlayerData : MonoBehaviour
         None,
         Farine,
         Sucre,
-        Fleurs_Toxiques,
+        Fleurs_toxiques,
         Pelle,
-        LivreLocal,
+        Livre_de_folklore,
         Poison
     }
 
-    private void Start()
+    public void StartGame()
     {
-        Gold = 5;
-        dialogueManager = GetComponent<DialogueManager>();
-
+        CanvasGroup canvasGroup = GameObject.Find("MainMenu").GetComponent<CanvasGroup>();
+        canvasGroup.alpha = 0f;
+        canvasGroup.interactable = false;
+        canvasGroup.blocksRaycasts = false;
 
         dialogueManager.CurrentNPC = GameObject.Find("Narrateur").GetComponent<Narrateur>().VIDE;
         dialogueManager.Begin();
     }
 
+    public void RollCredits()
+    {
+        CanvasGroup mainMenu = GameObject.Find("MainMenu").GetComponent<CanvasGroup>();
+        mainMenu.alpha = 0f;
+        mainMenu.interactable = false;
+        mainMenu.blocksRaycasts = false;
+        CanvasGroup creditsMenu = GameObject.Find("CreditsMenu").GetComponent<CanvasGroup>();
+        creditsMenu.alpha = 1f;
+        creditsMenu.interactable = true;
+        creditsMenu.blocksRaycasts = true;
+    }
+    public void Back()
+    {
+        CanvasGroup creditsMenu = GameObject.Find("CreditsMenu").GetComponent<CanvasGroup>();
+        creditsMenu.alpha = 0f;
+        creditsMenu.interactable = false;
+        creditsMenu.blocksRaycasts = false;
+        CanvasGroup mainMenu = GameObject.Find("MainMenu").GetComponent<CanvasGroup>();
+        mainMenu.alpha = 1f;
+        mainMenu.interactable = true;
+        mainMenu.blocksRaycasts = true;
+    }
+
+    public string GetInventoryString()
+    {
+        string ret = "";
+        foreach (InventorySlot slot in Inventory)
+        {
+            ret += $"{slot.Item.ToString().Replace('_', ' ')} x {slot.Count}{Environment.NewLine}";
+        }
+        return ret;
+    }
+
+    
+    private void Start()
+    {
+        Gold = 5;
+        dialogueManager = GetComponent<DialogueManager>();
+    }
+
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (VD.isActive && Input.GetMouseButtonDown(0))
         {
             if (!VD.nodeData.isPlayer)
                 NextDialog();
