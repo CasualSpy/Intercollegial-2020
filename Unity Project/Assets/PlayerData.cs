@@ -78,11 +78,6 @@ public class PlayerData : MonoBehaviour
 
     private void Update()
     {
-        if (VD.isActive && Input.GetMouseButtonDown(0))
-        {
-            if (!VD.nodeData.isPlayer)
-                NextDialog();
-        }
     }
 
     public List<InventorySlot> Inventory { get; set; }
