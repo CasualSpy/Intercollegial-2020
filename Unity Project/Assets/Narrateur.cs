@@ -34,7 +34,8 @@ public class Narrateur : MonoBehaviour
     public void GoCentralPlace()
     {
         if (VD.isActive)
-        VD.EndDialogue();
+            VD.EndDialogue();
+        playerData.TalkingTo = null;
         dialogueManager.CurrentNPC = VIDE;
         dialogueManager.Begin();
         VD.SetNode(1);
@@ -45,14 +46,22 @@ public class Narrateur : MonoBehaviour
     {
         Dateable gaston = GameObject.Find("Gaston").GetComponent<Dateable>();
 
-        VD.EndDialogue();
-        playerData.StartDialog(gaston);
+        if (playerData.HasTag("GastonDead"))
+        {
+            GoSellStuff();
+        }
+        else
+        {
+            VD.EndDialogue();
+            playerData.StartDialog(gaston);
+        }
     }
 
     public void GoSellStuff()
     {
         VD.EndDialogue();
         dialogueManager.CurrentNPC = VIDE;
+        playerData.TalkingTo = null;
         dialogueManager.Begin();
         VD.SetNode(23);
     }
@@ -68,5 +77,37 @@ public class Narrateur : MonoBehaviour
     {
         GameObject.Find("Shop").GetComponent<ShopManager>().Hide();
         GoCentralPlace();
+    }
+
+    public void GastonTrustSplit()
+    {
+        Dateable gaston = GameObject.Find("Gaston").GetComponent<Dateable>();
+        if (gaston.Trust >= 4)
+        {
+            //Can suggest meeting
+            VD.SetNode(25);
+        }
+        else { VD.SetNode(18); }
+    }
+
+    public void GoHome()
+    {
+        VD.EndDialogue();
+        dialogueManager.CurrentNPC = VIDE;
+        playerData.TalkingTo = null;
+        dialogueManager.Begin();
+    }
+
+    public void FrancoisLogic()
+    {
+        Dateable francois = GameObject.Find("Francois").GetComponent<Dateable>();
+        if (playerData.HasTag("FrancoisDead"))
+        {
+            VD.SetNode(29);
+        } else
+        {
+            VD.EndDialogue();
+            playerData.StartDialog(francois);
+        }
     }
 }

@@ -93,7 +93,7 @@ public class DialogueManager : MonoBehaviour
 
                                 available = false;
 
-                        }                        if (playerData.TalkingTo != null && playerData.TalkingTo.Trust < checks.trust)
+                        }                        if (playerData.TalkingTo != null && (checks.trust != 0 && playerData.TalkingTo.Trust < checks.trust))
                             available = false;
                     }
 

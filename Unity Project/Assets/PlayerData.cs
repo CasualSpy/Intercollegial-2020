@@ -177,7 +177,11 @@ public class PlayerData : MonoBehaviour
             case "trust":
                 float parsed = 0f;
                 if (float.TryParse(value, out parsed))
+                {
                     TalkingTo.Trust += parsed;
+                    if (TalkingTo.Trust < 0)
+                        TalkingTo.Trust = 0;
+                }
                 break;
             // Set new dialog tree
             case "tree":

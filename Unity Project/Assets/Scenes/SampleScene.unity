@@ -1009,6 +1009,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854570, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: Name
+      value: Armand Beauregard
+      objectReference: {fileID: 0}
+    - target: {fileID: 7728592204993854570, guid: 2e6cc22ed73fc2a408b27c218040b7ae,
+        type: 3}
+      propertyPath: Description
+      value: Maire de la ville, ivrogne incorrigible, anxieux et violent
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2e6cc22ed73fc2a408b27c218040b7ae, type: 3}
 --- !u!224 &398789159 stripped
