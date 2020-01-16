@@ -33,6 +33,7 @@ public class Narrateur : MonoBehaviour
 
     public void GoCentralPlace()
     {
+        if (VD.isActive)
         VD.EndDialogue();
         dialogueManager.CurrentNPC = VIDE;
         dialogueManager.Begin();
@@ -54,5 +55,18 @@ public class Narrateur : MonoBehaviour
         dialogueManager.CurrentNPC = VIDE;
         dialogueManager.Begin();
         VD.SetNode(23);
+    }
+
+    public void OpenShop()
+    {
+        VD.EndDialogue();
+        dialogueManager.container_PLAYER.SetActive(false);
+        GameObject.Find("Shop").GetComponent<ShopManager>().Show();
+    }
+
+    public void ShopClosed()
+    {
+        GameObject.Find("Shop").GetComponent<ShopManager>().Hide();
+        GoCentralPlace();
     }
 }

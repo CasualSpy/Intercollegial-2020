@@ -29,6 +29,7 @@ public class ShopManager : MonoBehaviour
         CanvasGroup shop = GameObject.Find("Shop").GetComponent<CanvasGroup>();
         shop.alpha = 1;
         shop.blocksRaycasts = true;
+        shop.interactable = true;
     }
 
     public void Hide()
@@ -36,5 +37,6 @@ public class ShopManager : MonoBehaviour
         CanvasGroup shop = GameObject.Find("Shop").GetComponent<CanvasGroup>();
         shop.alpha = 0;
         shop.blocksRaycasts = false;
+        shop.interactable = false;
     }
 }
