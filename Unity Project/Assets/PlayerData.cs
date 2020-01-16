@@ -19,7 +19,10 @@ public class PlayerData : MonoBehaviour
         Fleurs_Toxiques,
         Pelle,
         LivreLocal,
-        Poison
+        Poison,
+        Patisserie,
+        Patisserie_Empoisonnee,
+        Pain
     }
 
     private void Start()
@@ -116,7 +119,7 @@ public class PlayerData : MonoBehaviour
 
     public void Yeet(string s, int i)
     {
-
+        //TODO KILL MAIRE
     }
 
     public void Events(string name, string value)
@@ -128,7 +131,7 @@ public class PlayerData : MonoBehaviour
                 TalkingTo.SetEmotion(value);
                 break;
             // Add to NPC suspicion value (negative value to remove)
-            case "suspicion":
+            case "trust":
                 float parsed = 0f;
                 if (float.TryParse(value, out parsed))
                     TalkingTo.Trust += parsed;

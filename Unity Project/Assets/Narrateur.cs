@@ -35,7 +35,24 @@ public class Narrateur : MonoBehaviour
     {
         VD.EndDialogue();
         dialogueManager.CurrentNPC = VIDE;
+        dialogueManager.Begin();
         VD.SetNode(1);
+    }
+
+    public void GastonLogic()
+    {
+        Dateable gaston = GameObject.Find("Boulanger").GetComponent<Dateable>();
+
+        VD.EndDialogue();
+        dialogueManager.CurrentNPC = gaston.VIDE;
+        dialogueManager.Begin();
+    }
+
+    public void GoSellStuff()
+    {
+        VD.EndDialogue();
+        dialogueManager.CurrentNPC = VIDE;
+        VD.SetNode(23);
         dialogueManager.Begin();
     }
 }
