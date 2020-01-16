@@ -46,7 +46,7 @@ public class Narrateur : MonoBehaviour
         Dateable gaston = GameObject.Find("Gaston").GetComponent<Dateable>();
 
         VD.EndDialogue();
-        playerData.StartDialog(GameObject.Find("Boulanger").GetComponent<Dateable>());
+        playerData.StartDialog(gaston);
     }
 
     public void GoSellStuff()

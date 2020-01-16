@@ -78,6 +78,10 @@ public class PlayerData : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKey(KeyCode.Return) && !VD.nodeData.isPlayer)
+        {
+            dialogueManager.Next();
+        }
     }
 
     public List<InventorySlot> Inventory { get; set; }
@@ -96,7 +100,7 @@ public class PlayerData : MonoBehaviour
 
     public bool HasEnoughItem(Item item, int qty)
     {
-        return Inventory.Find(x => x.Item == item).Count > qty;
+        return Inventory.Find(x => x.Item == item).Count >= qty;
     }
 
     public void AddInventoryItem(Item item)
@@ -112,6 +116,8 @@ public class PlayerData : MonoBehaviour
             toModify.Count++;
             Inventory[index] = toModify;
         }
+
+        Debug.Log("Added to inv:" + item.ToString());
     }
 
     public void RemoveInventoryItem(Item item)
@@ -130,6 +136,7 @@ public class PlayerData : MonoBehaviour
                 Inventory.RemoveAt(index);
             }
         }
+        Debug.Log("Removed from inv:" + item.ToString());
     }
 
     public void StartDialog(Dateable dateable)
@@ -160,7 +167,7 @@ public class PlayerData : MonoBehaviour
 
     public void Events(string name, string value)
     {
-        switch (name.ToLower())
+        switch (name.ToLower().Trim())
         {
             // Change NPC sprite to display another emotion
             case "emotion":
@@ -204,6 +211,7 @@ public class PlayerData : MonoBehaviour
         }
     }
 
+    //FOREVER ALONE
     public void NextDialog()
     {
         dialogueManager.Next();

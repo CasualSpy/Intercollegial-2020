@@ -20,7 +20,8 @@ public class DialogueManager : MonoBehaviour
     {
         playerData = GameObject.Find("Player").GetComponent<PlayerData>();
         VD.LoadDialogues();
-
+        VD.OnNodeChange += UpdateUI;
+        VD.OnEnd += End;
 
         container_NPC.SetActive(false);
         container_PLAYER.SetActive(false);
@@ -49,8 +50,6 @@ public class DialogueManager : MonoBehaviour
 
     public void Begin()
     {
-        VD.OnNodeChange += UpdateUI;
-        VD.OnEnd += End;
         VD.BeginDialogue(CurrentNPC);
     }
 
@@ -62,6 +61,7 @@ public class DialogueManager : MonoBehaviour
 
     void UpdateUI(VD.NodeData data)
     {
+        //Debug.Log("Updated UI");
         container_NPC.SetActive(false);
         container_PLAYER.SetActive(false);
         if (data.isPlayer)
